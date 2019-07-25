@@ -26,7 +26,7 @@ def parse_opt():
                     help='different attention model, now supporting topdown | att2in2')
     parser.add_argument('--num_workers', dest='num_workers',
                     help='number of worker to load data',
-                    default=10, type=int)
+                    default=4, type=int)
     parser.add_argument('--cuda', type=bool, default=True,
                     help='whether use cuda')
     parser.add_argument('--mGPUs', type=bool, default=False,

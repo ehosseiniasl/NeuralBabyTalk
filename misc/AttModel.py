@@ -239,12 +239,12 @@ class CascadeCore(nn.Module):
                                 nn.Linear(opt.rnn_size, 300))
 
         # initialize the fine-grained glove embedding.
-        self.fg_emb = Parameter(opt.glove_fg)
-        self.fg_emb.requires_grad=False
+        self.fg_emb = Parameter(opt.glove_fg, requires_grad=False)
+        #self.fg_emb.requires_grad=False
 
         # setting the fg mask for the cascadeCore.
-        self.fg_mask = Parameter(opt.fg_mask)
-        self.fg_mask.requires_grad=False
+        self.fg_mask = Parameter(opt.fg_mask, requires_grad=False)
+        #self.fg_mask.requires_grad=False
         self.min_value = -1e8
         self.beta = opt.beta
 
